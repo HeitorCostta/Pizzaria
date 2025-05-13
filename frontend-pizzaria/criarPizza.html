@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Pizzas</title>
+  <link rel="stylesheet" href="./css/criarPizza.css">
+</head>
+<body>
+  <h1>Cadastro de Pizza</h1>
+
+  <!-- Campo para buscar pizza por ID -->
+  <input type="text" id="pizzaId" placeholder="ID da Pizza">
+  <button onclick="buscarPizza()">Buscar Pizza</button>
+
+  <!-- Formulário de criação/edição -->
+  <form id="formCriarPizza">
+    <input type="text" id="nome" placeholder="Nome da Pizza" required><br>
+    <textarea id="descricao" placeholder="Descrição" required></textarea><br>
+    <input type="text" id="ingredientes" placeholder="Ingredientes separados por vírgula" required><br>
+    <input type="text" id="imagem" placeholder="URL da imagem"><br>
+
+    <label>Preço Pequena:</label>
+    <input type="number" id="pequenaPreco" step="0.01" required><br>
+
+    <label>Preço Média:</label>
+    <input type="number" id="mediaPreco" step="0.01" required><br>
+
+    <label>Preço Grande:</label>
+    <input type="number" id="grandePreco" step="0.01" required><br>
+
+    <button type="submit">Salvar Pizza</button>
+    <button type="button" onclick="atualizarPizza()">Atualizar Pizza</button>
+  </form>
+
+  <h2>Lista de Pizzas</h2>
+
+  <table border="1" id="tabelaPizzas">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Ingredientes</th>
+        <th>Tamanhos e Preços</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Linhas dinâmicas de pizzas aparecem aqui -->
+    </tbody>
+  </table>
+
+  <!-- JavaScript -->
+  <script src="./js/criarPizza.js"></script>
+</body>
+</html>

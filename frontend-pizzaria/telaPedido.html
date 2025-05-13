@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos</title>
+    <link rel="stylesheet" href="./css/cadastroPedido.css">
+</head>
+<body>
+    <form id="pedidoForm">
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+
+        <label for="statusSelect">Status:</label>
+        <select id="statusSelect">
+            <option value="pendente">Pendente</option>
+            <option value="em andamento">Em andamento</option>
+            <option value="concluido">Concluído</option>
+        </select>
+
+        <label for="dataCadastro">Data de Cadastro:</label>
+        <input type="date" id="dataCadastro" name="dataCadastro">
+
+        <div id="pizzasContainer">
+            <h3>Pizzas</h3>
+            <!-- As pizzas serão adicionadas dinamicamente aqui -->
+        </div>
+        <button type="button" onclick="adicionarPizza()">Adicionar Pizza</button>
+
+        <div id="bebidasContainer">
+            <h3>Bebidas</h3>
+            <!-- As bebidas serão adicionadas dinamicamente aqui -->
+        </div>
+        <button type="button" onclick="adicionarBebida()">Adicionar Bebida</button>
+
+        <div id="sobremesasContainer">
+            <h3>Sobremesas</h3>
+            <!-- As sobremesas serão adicionadas dinamicamente aqui -->
+        </div>
+        <button type="button" onclick="adicionarSobremesa()">Adicionar Sobremesa</button>
+
+        <button type="submit" id="saveButton">Salvar Pedido</button>
+    </form>
+
+    <div id="pedidosList">
+        <!-- Lista de pedidos será exibida aqui -->
+    </div>
+
+    <script src="./js/cadastroPedido.js"></script>
+</body>
+</html>

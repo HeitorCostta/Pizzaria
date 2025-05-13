@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Itens</title>
+  <link rel="stylesheet" href="./css/cadastroBebidaSobremesa.css">
+  <script src="./js/criarBebidaSobremesa.js" defer></script>
+</head>
+<body>
+
+  <h1>Cadastro de Bebidas e Sobremesas</h1>
+
+  <form id="itemForm">
+    <input type="hidden" id="idItem"> <!-- usado na edição -->
+    <input type="hidden" id="modo"> <!-- 'criar' ou 'editar' -->
+
+    <label for="tipo">Tipo de item:</label>
+    <select id="tipo" name="tipo" required>
+      <option value="bebida">Bebida</option>
+      <option value="sobremesa">Sobremesa</option>
+    </select><br><br>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" name="descricao"><br><br>
+
+    <label for="preco">Preço:</label>
+    <input type="number" id="preco" name="preco" step="0.01" required><br><br>
+
+    <label for="imagem">Imagem (URL):</label>
+    <input type="text" id="imagem" name="imagem"><br><br>
+
+    <div id="embalagemField" style="display:none;">
+      <label for="embalagem">Embalagem:</label>
+      <select id="embalagem" name="embalagem">
+        <option value="lata">Lata</option>
+        <option value="garrafa 600ml">Garrafa 600ml</option>
+        <option value="garrafa 2L">Garrafa 2L</option>
+      </select><br><br>
+    </div>
+
+    <div id="tipoSobremesaField" style="display:none;">
+      <label for="tipoSobremesa">Tipo de Sobremesa:</label>
+      <select id="tipoSobremesa" name="tipoSobremesa">
+        <option value="sorvete">Sorvete</option>
+        <option value="trufa">Trufa</option>
+      </select><br><br>
+    </div>
+
+    <button type="submit" id="submitBtn">Cadastrar</button>
+  </form>
+
+  <hr>
+  <h2>Itens Cadastrados</h2>
+  <div id="listaItens"></div>
+
+</body>
+</html>
